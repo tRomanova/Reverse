@@ -84,3 +84,10 @@ body {
     font-size: 4rem;
     padding-left: .5rem;
 }
+#results{
+    color:rgb(67, 159, 159) ;
+}
+
+.rewindTitle{
+    color:rgb(67, 159, 159) ;
+}

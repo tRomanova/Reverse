@@ -61,8 +61,8 @@
 <main class="content container">
     <div class="row">
         <div class="col-5">
-            <h1 class="display-5 fw-bold mb-3"> Rewind: A coding Challenge</h1>
-            <h4 class="leaed">There and back again. A JavaScript coding challenge using arrays.
+            <h1 class="display-5 fw-bold mb-3 rewindTitle" > Rewind: A coding Challenge</h1>
+            <h4 class="leaed">A JavaScript coding challenge using arrays.
                 Write a program which displays the user's string in reverse.</h4>
         </div>
         <div class="col">
@@ -73,12 +73,13 @@
                         aria-label="Enter A string">
                 </div>
                 <div class="col-12">
-                    <button type="button" id="btnSubmit" class="btn btn-danger">Reverse</button>
+                    <button type="button" id="btnSubmit" class="btn btn-warning">Reverse</button>
                 </div>
             </form>
             <div class="mt-5 alert alert-ganger fade show invisible" id="alert" role="alert">
+                <h5>Your reverse String is: <span id="results"></span></h5>
                 <hr />
-                <p class="mb-0" id="results"></p>
+                <!-- <p class="mb-0" id="results"></p> -->
 
             </div>
         </div>

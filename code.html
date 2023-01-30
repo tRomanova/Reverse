@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link "  href="/index.html">Home</a>
+                            <a class="nav-link " href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="app.html">Reverse</a>
@@ -59,33 +59,65 @@
         </nav>
     </header>
 
-
     <main class="content container">
-
         <div class="content container">
             <div class="row">
                 <h1 class="border-bottom border-2 border-dark">The code</h1>
                 <div class="col col-12 col-lg">
                     <pre class="line-numbers">
                         <code class="language-js">
-                            function displayMessage(params) {
-                                let msg = document.getElementById("message").value;
-                            
-                                Swal.fire(
-                                    {
-                                        backdrop: false,
-                                        title: "AppName",
-                                        text: msg
-                                    }
-                                )
+                            //entering function
+                            function getValues() {
+                                let inputSting = document.getElementById('userString').value
+
+                                let revString = reverseString(inputSting);
+                                displayString(revString);
+                            }
+
+                            //logic function
+                            // reverse a string
+                            function reverseString(userString) {
+                                //reverse the string
+                                let newSring = ''
+
+                                for (let i = userString.length -1; i >= 0; i--) {
+                                    newSring += userString[i];
+                                }
+
+                                return newSring;
+                            }
+
+                            //view function
+                            function displayString(revString) {
+                                document.getElementById('results').textContent = revString;
+                                document.getElementById('alert').classList.remove('invisible');
                             }
                         </code>
                     </pre>
                 </div>
                 <div class="col col-12 col-lg-4">
-                    <p>The code is structured in one function</p>
-                    <p><code>displayMessage</code></p>
-                    <p>Print out the message</p>
+                    <p>The code is structured in three functions</p>
+                    <p>Function<code>getValues</code>: grabs the user input.
+                        Then <code>reverseString</code> function is called
+                        and the value received from user is passed to this function.
+                        Once value from <code>reverseString</code> function is received <code>displayString</code>
+                        function is called to display the result.
+                    </p>
+                    <p>
+                        Function <code>reverseString</code> reverses the string that was received as a parameter.
+                        I declare an empty string variable to assign a reverse string.
+                        I am using a for loop to iterate through each element of the string,
+                        each element will be assigned to a new string variable. The number
+                        of characters in the string is the number of times this loop will run.
+                        The start point is the last element of the string. Ones code is out of the for loop
+                        function retunes the reversed string.
+                    </p>
+                    <p>
+                        Function <code>displayString</code>receives the value of the reversed string.
+                        Then the function grabs the element where reversed string will be displayed, and assigns it to
+                        that element.
+                        Then 'invisible' class is removed from alert, so that reversed string is visible as an alert.
+                    </p>
                 </div>
             </div>
         </div>
